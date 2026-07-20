@@ -90,7 +90,7 @@ export default function Hero() {
             </Link>
             
             <Link
-              href="https://drive.google.com/file/d/1Oe-7woSWOl6f_XzDhPxp3DzlbLLlpuBv/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qvNmkHaJJSOpUh2n3DbOqaBCFE-Yppq7/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
