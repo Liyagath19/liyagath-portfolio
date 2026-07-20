@@ -45,7 +45,7 @@ const experiences = [
 
 export default function Experience() {
   const containerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+  const isInView = useInView(containerRef, { once: false, margin: "-100px" });
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -64,6 +64,8 @@ export default function Experience() {
           scrollTrigger: {
             trigger: item,
             start: 'top 85%',
+            end: 'bottom 10%',
+            toggleActions: 'play reverse play reverse',
           }
         }
       );

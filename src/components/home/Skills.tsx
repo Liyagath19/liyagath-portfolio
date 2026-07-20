@@ -91,7 +91,7 @@ const titleVariants: Variants = {
 
 export default function Skills() {
   const containerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: '-80px' });
+  const isInView = useInView(containerRef, { once: false, margin: '-80px' });
 
   useEffect(() => {
     if (!containerRef.current) return;

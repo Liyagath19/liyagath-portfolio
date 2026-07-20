@@ -18,7 +18,7 @@ const stats = [
 
 export default function About() {
   const containerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+  const isInView = useInView(containerRef, { once: false, margin: "-100px" });
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -36,6 +36,8 @@ export default function About() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top 70%',
+          end: 'bottom 10%',
+          toggleActions: 'play reverse play reverse',
         }
       }
     );
