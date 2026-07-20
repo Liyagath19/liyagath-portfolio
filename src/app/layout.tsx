@@ -6,6 +6,7 @@ import CustomCursor from "@/components/layout/CustomCursor";
 import Navbar from "@/components/layout/Navbar";
 import LoadingScreen from "@/components/layout/LoadingScreen";
 import Footer from "@/components/layout/Footer";
+import PageBackground from "@/components/layout/PageBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <body className="antialiased font-sans selection:bg-[var(--color-primary)] selection:text-white">
+        <PageBackground />
         <LoadingScreen />
         <CustomCursor />
         <SmoothScroll>
