@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Send, MapPin, Mail, Phone } from 'lucide-react';
 import MagneticButton from '../ui/MagneticButton';
+import QRCode from 'react-qr-code';
 
 export default function Contact() {
   const containerRef = useRef<HTMLElement>(null);
@@ -123,11 +124,14 @@ export default function Contact() {
                 <div className="text-sm font-medium text-white/80">Scan to chat on WhatsApp</div>
               </div>
               <div className="p-3 bg-white rounded-3xl inline-block shadow-[0_0_30px_rgba(37,211,102,0.15)] group-hover:shadow-[0_0_40px_rgba(37,211,102,0.3)] transition-shadow duration-500 relative overflow-hidden">
-                <img 
-                  src="/whatsapp-qr.jpg" 
-                  alt="WhatsApp QR Code" 
-                  className="w-36 h-36 md:w-48 md:h-48 object-contain rounded-2xl relative z-10"
-                />
+                <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center relative z-10">
+                  <QRCode 
+                    value="https://wa.me/919025790871" 
+                    size={160}
+                    style={{ height: "100%", width: "100%" }}
+                    fgColor="#25D366"
+                  />
+                </div>
               </div>
             </div>
           </motion.div>
