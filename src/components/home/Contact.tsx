@@ -113,6 +113,23 @@ export default function Contact() {
                 <span className="text-sm font-medium text-white group-hover/pin:text-[var(--color-secondary)] transition-colors">Thuraiyur, Tamil Nadu 📍</span>
               </a>
             </div>
+
+            {/* WhatsApp QR Code */}
+            <div className="mt-10 flex flex-col items-center sm:items-start group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366]">
+                  <Phone size={20} />
+                </div>
+                <div className="text-sm font-medium text-white/80">Scan to chat on WhatsApp</div>
+              </div>
+              <div className="p-3 bg-white rounded-3xl inline-block shadow-[0_0_30px_rgba(37,211,102,0.15)] group-hover:shadow-[0_0_40px_rgba(37,211,102,0.3)] transition-shadow duration-500 relative overflow-hidden">
+                <img 
+                  src="/whatsapp-qr.jpg" 
+                  alt="WhatsApp QR Code" 
+                  className="w-36 h-36 md:w-48 md:h-48 object-contain rounded-2xl relative z-10"
+                />
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
